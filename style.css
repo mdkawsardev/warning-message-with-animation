@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+
+.alert {
+    width: 95%;
+    height: 80px;
+    margin: 0 auto;
+    /* margin-top: -100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ff6f00da;
+    border-radius: 1rem;
+    animation: myani 1s linear;
+    box-shadow: 0 0 15px #767676;
+}
+
+@keyframes myani {
+    0% {
+        margin-top: -100px;
+    }
+    50% {
+        margin-top: -50px;
+        
+    }
+    100% {
+        margin-top: 0;
+        
+    }
+}
+
+.alert .button {
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.opacity-none {
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.parent {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6f00da;
+    box-shadow: 0 0 15px #767676;
+    border-radius: 8px;
+    animation: confirm 1s linear infinite;
+}
+
+@keyframes confirm {
+    /* This is just pop-up */
+    /* 0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    } */
+    
+    /* Something special if you try this you have to add infinite  */
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.8);
+    } 
+    100% {
+        transform: scale(1);
+    } 
+}
+
+.confirm #Ok {
+    border: 1px solid gray;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}
+
+.body {
+    overflow: hidden;
+}
